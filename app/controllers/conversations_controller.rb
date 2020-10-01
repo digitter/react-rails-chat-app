@@ -5,7 +5,7 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    conversatios = Conversation.new(conversation_params)
+    conversation = Conversation.new(conversation_params)
 
     if  conversation.save
       serialized_data = ActiveModelSerializers::Adapter::Json.new(

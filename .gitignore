@@ -33,3 +33,5 @@
 
 /vendor/*
 
+/node_modules/*
+

@@ -81,7 +81,7 @@ const findActiveConversation = (conversations, activeConversation) => {
 const mapConversations = (conversations, handleClick) => {
   return conversations.map(conversation => {
     return (
-      <li key={conversations.id} onClick={() => handleClick(conversation.id)}>
+      <li key={conversation.id} onClick={() => handleClick(conversation.id)}>
         {conversation.title}
       </li>
     );

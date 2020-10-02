@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ActionCable } from 'react-actioncable-provider';
+import { ActionCableConsumer } from 'react-actioncable-provider';
 import { API_ROOT } from '../constants';
 import NewConversationForm from './NewConversationForm';
 import MessagesArea from './MessagesArea';
@@ -43,7 +43,7 @@ export default class ConversationList extends Component {
 
     return (
       <div className="conversationsList">
-        <ActionCable
+        <ActionCableConsumer
           channel={{ channel: 'ConversationsChannel' }}
           onReceived={this.handleReceivedonversation}
         />
